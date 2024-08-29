@@ -14,7 +14,7 @@ Cette application React permet de gérer une liste de contacts avec les fonction
 
 ### Prérequis
 
-- Node.js (version >= 14.x)
+- Node.js (version >= 16.x)
 - npm ou yarn
 
 ### Installation
