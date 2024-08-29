@@ -65,8 +65,8 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 
 **Exemple**:
 ```bash
-    const isValid = validateFirstName('John'); 
-    const isInvalid = validateFirstName('John123'); 
+    const isValid = validateFirstName('John'); // true
+    const isInvalid = validateFirstName('John123'); // false
 ```  
 
 #### validateLastName
