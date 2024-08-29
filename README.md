@@ -64,10 +64,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si le prénom est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
-    const isValid = validateFirstName('John'); // true
-    const isInvalid = validateFirstName('John123'); // false
-    ```
+```bash
+    const isValid = validateFirstName('John'); 
+    const isInvalid = validateFirstName('John123'); 
+```  
 
 #### validateLastName
 
@@ -78,10 +78,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si le nom de famille est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
+```bash
     const isValid = validateLastName('Doe'); // true
     const isInvalid = validateLastName('Doe123'); // false
-    ```
+```
 
 #### validateAge
 
@@ -92,10 +92,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si l'âge est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
+```bash
     const isValid = validateAge('25'); // true
     const isInvalid = validateAge('-5'); // false
-    ```
+```
 
 #### validateCountry
 
@@ -106,10 +106,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si le pays est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
+```bash
     const isValid = validateCountry('France'); // true
     const isInvalid = validateCountry('France123'); // false
-    ```
+```
 
 #### validateEmail
 
@@ -120,10 +120,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si l'adresse e-mail est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
+```bash
     const isValid = validateEmail('john.doe@example.com'); // true
     const isInvalid = validateEmail('john.doe@.com'); // false
-    ```
+```
 
 #### validatePhone
 
@@ -134,10 +134,10 @@ Pour que l'application React puisse se connecter à votre backend Symfony, vous 
 **Retour**: `boolean` - Retourne `true` si le numéro de téléphone est valide, sinon `false`.
 
 **Exemple**:
-    ```bash
+```bash
     const isValid = validatePhone('+1234567890'); // true
     const isInvalid = validatePhone('12345'); // false
-    ```
+```
 ### Gestion des Notifications
 
 L'application utilise `react-toastify` pour afficher des notifications de manière élégante. 
