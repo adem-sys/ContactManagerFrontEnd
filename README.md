@@ -1,72 +1,132 @@
 # ContactManagerFrontEnd
-=======
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application de Gestion des Contacts - Frontend (React)
 
-## Available Scripts
+### Description
 
-In the project directory, you can run:
+Cette application React permet de gérer une liste de contacts avec les fonctionnalités suivantes :
+- Ajouter un nouveau contact
+- Afficher tous les contacts dans un tableau triable
+- Modifier les détails d'un contact existant
+- Éliminer un contact
+- Rechercher des contacts de manière dynamique
 
-### `npm start`
+### Prérequis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (version >= 14.x)
+- npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/adem-sys/ContactManagerFrontEnd.git
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Installez les dépendances :
+    ```bash
+    cd ContactManagerFrontEnd
+    npm install
+    # ou
+    yarn install
+    ```
 
-### `npm run build`
+3. Démarrez l'application :
+    ```bash
+    npm start
+    # ou
+    yarn start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Accédez à l'application sur [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Documentation des Validateurs de Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### validateFirstName
 
-### `npm run eject`
+**Description**: Valide le prénom d'un contact. Le prénom doit contenir uniquement des lettres et des espaces.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Paramètre**: `firstName` (string) - Le prénom à valider.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Retour**: `boolean` - Retourne `true` si le prénom est valide, sinon `false`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Exemple**:
+    ```bash
+    const isValid = validateFirstName('John'); // true
+    const isInvalid = validateFirstName('John123'); // false
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### validateLastName
 
-## Learn More
+**Description**: Valide le nom de famille d'un contact. Le nom doit contenir uniquement des lettres et des espaces.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Paramètre**: `lastName` (string) - Le nom de famille à valider.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Retour**: `boolean` - Retourne `true` si le nom de famille est valide, sinon `false`.
 
-### Code Splitting
+**Exemple**:
+    ```bash
+    const isValid = validateLastName('Doe'); // true
+    const isInvalid = validateLastName('Doe123'); // false
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### validateAge
 
-### Analyzing the Bundle Size
+**Description**: Valide l'âge d'un contact. L'âge doit être un entier positif.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Paramètre**: `age` (string) - L'âge à valider.
 
-### Making a Progressive Web App
+**Retour**: `boolean` - Retourne `true` si l'âge est valide, sinon `false`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Exemple**:
+    ```bash
+    const isValid = validateAge('25'); // true
+    const isInvalid = validateAge('-5'); // false
+    ```
 
-### Advanced Configuration
+#### validateCountry
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Description**: Valide le pays d'un contact. Le pays doit contenir uniquement des lettres et des espaces.
 
-### Deployment
+**Paramètre**: `country` (string) - Le pays à valider.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Retour**: `boolean` - Retourne `true` si le pays est valide, sinon `false`.
 
-### `npm run build` fails to minify
+**Exemple**:
+    ```bash
+    const isValid = validateCountry('France'); // true
+    const isInvalid = validateCountry('France123'); // false
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### validateEmail
+
+**Description**: Valide l'adresse e-mail d'un contact. L'adresse e-mail doit être dans un format valide.
+
+**Paramètre**: `email` (string) - L'adresse e-mail à valider.
+
+**Retour**: `boolean` - Retourne `true` si l'adresse e-mail est valide, sinon `false`.
+
+**Exemple**:
+    ```bash
+    const isValid = validateEmail('john.doe@example.com'); // true
+    const isInvalid = validateEmail('john.doe@.com'); // false
+    ```
+
+#### validatePhone
+
+**Description**: Valide le numéro de téléphone d'un contact. Le numéro de téléphone doit être dans un format valide.
+
+**Paramètre**: `phone` (string) - Le numéro de téléphone à valider.
+
+**Retour**: `boolean` - Retourne `true` si le numéro de téléphone est valide, sinon `false`.
+
+**Exemple**:
+    ```bash
+    const isValid = validatePhone('+1234567890'); // true
+    const isInvalid = validatePhone('12345'); // false
+    ```
+### Gestion des Notifications
+
+L'application utilise `react-toastify` pour afficher des notifications de manière élégante. 
+
+Les notifications s'afficheront automatiquement en haut à droite de l'écran par défaut, mais vous pouvez personnaliser leur position et leur apparence selon vos besoins.
