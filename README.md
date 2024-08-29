@@ -10,6 +10,7 @@ Cette application React permet de gérer une liste de contacts avec les fonction
 - Modifier les détails d'un contact existant
 - Éliminer un contact
 - Rechercher des contacts de manière dynamique
+- Trier les contacts par colonnes
 
 ### Prérequis
 
