@@ -40,6 +40,18 @@ Cette application React permet de gérer une liste de contacts avec les fonction
 
 4. Accédez à l'application sur [http://localhost:3000](http://localhost:3000).
 
+### Configuration des Routes
+
+Pour que l'application React puisse se connecter à votre backend Symfony, vous devrez peut-être ajuster les routes utilisées pour les appels API. Assurez-vous de modifier les URL dans le fichier `ContactsTable.js` pour correspondre à l'URL de votre backend Symfony, comme suit :
+
+1. Ouvrez `ContactsTable.js` (ou le fichier pertinent où les appels API sont effectués).
+
+2. Modifiez les URL pour correspondre à celles de votre backend Symfony. Par exemple, si votre backend Symfony est accessible à [http://localhost:8000](http://localhost:8000), les appels API devraient utiliser cette base URL :
+
+    ```javascript
+    const API_BASE_URL = 'http://localhost:8000';
+    ```
+
 ### Documentation des Validateurs de Contact
 
 #### validateFirstName
